@@ -1,0 +1,14 @@
+.head{
+    background-color: rgb(2, 90, 141);
+    color: white;
+}
+
+.backpage{
+    background-color: rgb(33, 104, 145);
+}
+
+.footer{
+    background-color: rgb(25, 75, 104);
+    color: white;
+    line-height: 24px;
+}

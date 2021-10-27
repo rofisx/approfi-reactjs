@@ -6,15 +6,17 @@ class Komponen extends React.Component{
     render(){
         return(
             <div>
-                <ClassComponent
-                 nama = "Rofi"
-                />
-                <FunctionalComponent
-                 js= "Javascript"
-                 reactjs = "React JS"
-                 nodejs = "Node JS"
-                 expjs = "Express JS"
-                />
+                <header className="App-header">
+                    <ClassComponent
+                    nama = "Rofi"
+                    />
+                    <FunctionalComponent
+                    js= "Javascript"
+                    reactjs = "React JS"
+                    nodejs = "Node JS"
+                    expjs = "Express JS"
+                    />
+                </header>
             </div>
         )
     }

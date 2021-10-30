@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 export default class Navigation extends React.Component{
     render(){
@@ -7,16 +8,18 @@ export default class Navigation extends React.Component{
             <div>
                 <Navbar collapseOnSelect fixed='top' expand="lg" bg='dark' variant='dark'>
                     <Container fluid>
-                    <Navbar.Brand href="/">App Rofi</Navbar.Brand>
+                    <LinkContainer to="/">
+                        <Navbar.Brand >App Rofi</Navbar.Brand>
+                    </LinkContainer>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
-                            <Nav
-                            className="me-auto my-2 my-lg-0"
-                            style={{ maxHeight: '100px' }}
-                            navbarScroll
-                            >
-                            <Nav.Link href="/Komponen">Komponen</Nav.Link>
-                            <Nav.Link href="/Styling">Styling</Nav.Link>
+                            <Nav activeKey="/home" className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
+                                <LinkContainer to="/komponen">
+                                    <Nav.Link>Komponen</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="/styling">
+                                    <Nav.Link>Styling</Nav.Link>
+                                </LinkContainer>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

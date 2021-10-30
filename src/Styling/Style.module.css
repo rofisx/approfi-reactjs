@@ -4,11 +4,13 @@
 }
 
 .backpage{
-    background-color: rgb(33, 104, 145);
+    background-color: rgb(69, 101, 119);
+    overflow-x: hidden;
 }
 
 .footer{
     background-color: rgb(25, 75, 104);
     color: white;
     line-height: 24px;
+    
 }

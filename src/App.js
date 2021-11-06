@@ -5,6 +5,7 @@ import Styling from './Styling';
 import Komponen from './Komponen';
 import {Route, Switch} from 'react-router-dom';
 import Navigation from './Nav/Navigation';
+import FormValidation from './FormValidation';
 
 function App() {
   return (
@@ -17,11 +18,12 @@ function App() {
             <Route exact path='/' component={Home}/> 
             <Route path='/komponen' component={Komponen}/> 
             <Route path='/styling' component={Styling}/> 
+            <Route path='/form' component={FormValidation}/> 
         </Switch>
     </div>
 
     // <div className="App">
-    //    <Home/>
+    //    <FormValidation/>
     // </div>
 
 //  <div className="App">

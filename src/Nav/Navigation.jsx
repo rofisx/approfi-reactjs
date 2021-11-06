@@ -20,6 +20,9 @@ export default class Navigation extends React.Component{
                                 <LinkContainer to="/styling">
                                     <Nav.Link>Styling</Nav.Link>
                                 </LinkContainer>
+                                <LinkContainer to="/form">
+                                    <Nav.Link>Form</Nav.Link>
+                                </LinkContainer>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

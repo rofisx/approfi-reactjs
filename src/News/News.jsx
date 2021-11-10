@@ -15,29 +15,27 @@ export default class NewsComponent extends React.Component{
       getArticles = (value) => {
         if(!value){
           axios.get("https://newsapi.org/v2/top-headlines?country=id&apiKey=c313cc9772c14da19f0a8a18c1a32063")
-          .then(response => response.data.articles.map(article => ({
-              image:`${article.urlToImage}`,
-              title: `${article.title}`,
-              author:`${article.author}`,
-              desc:`${article.description}`,
-              date: `${article.publishedAt}`,
-              url: `${article.url}`
-            }))
-          )
-          .then(articles => {
-            this.setState({
-              articles,
-              isLoading: false
+              .then(response => response.data.articles.map(article => ({
+                  image:`${article.urlToImage}`,
+                  title: `${article.title}`,
+                  author:`${article.author}`,
+                  desc:`${article.description}`,
+                  date: `${article.publishedAt}`,
+                  url: `${article.url}`
+                }))
+              )
+              .then(articles => {
+                this.setState({
+                  articles,
+                  isLoading: false
+                });
+              })
+              .catch(error => {
+                if(error.response){
+                  alert(`${error.response.data.message}`)
+                }            
+              this.setState({ errors:<h2 style={{color:"grey"}}>Mohon Maaf Sedang Dalam Perbaikan</h2>, isLoading: false })     
             });
-          })
-          .catch(error => {
-            if(error.response){
-              alert(`${error.response.data.message}`)
-            }            
-          this.setState({ errors:<h2>Mohon Maaf Sedang Dalam Perbaikan</h2>, isLoading: false })      
-        
-        });
-
         }else{                
           axios.get(`https://newsapi.org/v2/top-headlines?q=${value}&country=id&apiKey=c313cc9772c14da19f0a8a18c1a32063`)
             .then(response => response.data.articles.map(article => ({
@@ -55,8 +53,12 @@ export default class NewsComponent extends React.Component{
                 isLoading: false
               });
             })
-            .catch(error => this.setState({ errors:<h2>Mohon Maaf Sedang Dalam Perbaikan</h2>, isLoading: false }));
-
+            .catch(error => {
+              if(error.response){
+                alert(`${error.response.data.message}`)
+              }            
+            this.setState({ errors:<h2 style={{color:"grey"}}>Mohon Maaf Sedang Dalam Perbaikan</h2>, isLoading: false })     
+          });
         }
       }
 

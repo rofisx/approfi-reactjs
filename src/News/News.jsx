@@ -14,7 +14,7 @@ export default class NewsComponent extends React.Component{
 
       getArticles = (value) => {
         if(!value){
-          axios.get("https://newsapi.org/v2/top-headliness?country=id&apiKey=c313cc9772c14da19f0a8a18c1a32063")
+          axios.get("https://newsapi.org/v2/top-headlines?country=id&apiKey=c313cc9772c14da19f0a8a18c1a32063")
           .then(response => response.data.articles.map(article => ({
               image:`${article.urlToImage}`,
               title: `${article.title}`,

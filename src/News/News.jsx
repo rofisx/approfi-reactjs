@@ -33,6 +33,8 @@ export default class NewsComponent extends React.Component{
           .catch(error => {
             if(error.response){
               console.log("Yang Error Data", error.response.data)
+              console.log("Yang Error Status",error.response.status);
+              console.log("Yang Error Header",error.response.headers)
               this.setState({ errors:<h2>Mohon Maaf Sedang Dalam Perbaikan</h2>, isLoading: false })
             }else if(error.request){
               console.log("Yang Error Request",error.request)

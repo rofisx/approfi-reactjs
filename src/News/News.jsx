@@ -33,7 +33,7 @@ export default class NewsComponent extends React.Component{
           .catch(error => {
             if(error.response){
               console.log("Yang Error Data", error.response.data)
-              alert(`${error.response.date.message}`)
+              alert(`${error.response.data.message}`)
             }else if(error.request){
               console.log("Yang Error Request",error.request)
             }else{

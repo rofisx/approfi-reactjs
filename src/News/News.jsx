@@ -91,7 +91,7 @@ export default class NewsComponent extends React.Component{
                       (<Loader type="Bars" color="#00BFFF" height={80} width={80} timeout={3000}/>)}
 
                       {this.state.errors}
-                </Row>
+                  </Row>
                 </Container>
             </div>
         );

@@ -23,6 +23,9 @@ export default class Navigation extends React.Component{
                                 <LinkContainer to="/form">
                                     <Nav.Link>Form</Nav.Link>
                                 </LinkContainer>
+                                <LinkContainer to="/news">
+                                    <Nav.Link>News API</Nav.Link>
+                                </LinkContainer>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

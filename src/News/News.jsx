@@ -33,16 +33,15 @@ export default class NewsComponent extends React.Component{
           .catch(error => {
             if(error.response){
               console.log("Yang Error Data", error.response.data)
-              console.log("Yang Error Status",error.response.status);
-              console.log("Yang Error Header",error.response.headers)
-              this.setState({ errors:<h2>Mohon Maaf Sedang Dalam Perbaikan</h2>, isLoading: false })
+              alert(`${error.response.date.message}`)
             }else if(error.request){
               console.log("Yang Error Request",error.request)
             }else{
               console.log('Errornya ', error.message)
             }
-
-          console.log("Yang Error Config",error.config)
+            
+          this.setState({ errors:<h2>Mohon Maaf Sedang Dalam Perbaikan</h2>, isLoading: false })
+          document.getElementById('content').innerHTML=`${error.config}`
         
         });
 
@@ -78,7 +77,7 @@ export default class NewsComponent extends React.Component{
             <div className="bg-secondary">
               <Search receiveValue={this.getArticles}/>                
                 <Container>
-                  <Row>
+                  <Row id="content">
                     {!isLoading 
                     ? (articles.map(article => {
                         const { image,title, date, author, desc, url } = article;

@@ -7,6 +7,7 @@ import Komponen from './Komponen';
 import Navigation from './Nav/Navigation';
 import FormValidation from './FormValidation';
 import News from './News';
+import NewsHooks from './Hooks';
 
 function App() {
   return (
@@ -14,18 +15,19 @@ function App() {
     //Modified by Rofi
 
     <div className="App">
-        <Navigation/>
+        <Navigation/> 
         <Switch>
             <Route exact path='/' component={Home}/> 
             <Route path='/komponen' component={Komponen}/> 
             <Route path='/styling' component={Styling}/> 
             <Route path='/form' component={FormValidation}/> 
             <Route path='/news' component={News}/> 
+            <Route path='/newshooks' component={NewsHooks}/> 
         </Switch>
     </div>
 
     // <div className="App">
-    //     <News/>
+    //     <NewsHooks/>
     // </div>
 
     // <div className="App">

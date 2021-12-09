@@ -8,6 +8,7 @@ import Navigation from './Nav/Navigation';
 import FormValidation from './FormValidation';
 import News from './News';
 import NewsHooks from './Hooks';
+import Redux from './Redux';
 
 function App() {
   return (
@@ -23,11 +24,12 @@ function App() {
             <Route path='/form' component={FormValidation}/> 
             <Route path='/news' component={News}/> 
             <Route path='/newshooks' component={NewsHooks}/> 
+            <Route path='/redux' component={Redux}/> 
         </Switch>
     </div>
 
     // <div className="App">
-    //     <NewsHooks/>
+    //     <Redux/>
     // </div>
 
     // <div className="App">

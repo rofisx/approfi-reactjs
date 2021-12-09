@@ -29,6 +29,9 @@ export default class Navigation extends React.Component{
                                 <LinkContainer to="/newshooks">
                                     <Nav.Link>Hook News API</Nav.Link>
                                 </LinkContainer>
+                                <LinkContainer to="/redux">
+                                    <Nav.Link>Redux Counter</Nav.Link>
+                                </LinkContainer>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
